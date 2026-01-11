@@ -87,7 +87,6 @@ export const MyDocument = ({ data }) => {
         {/* Encabezado con Logo y NIT */}
         <View style={styles.header}>
           <Image src="/logo.png" style={styles.logo} />
-          <Text style={styles.nit}>Nit. 900947995-2</Text>
         </View>
 
         {/* Ciudad y Fecha */}
@@ -95,12 +94,16 @@ export const MyDocument = ({ data }) => {
           <Text>{data.cidade}      {data.data}</Text>
         </View>
 
+        <Text style={styles.description}>
+          {data.client.toUpperCase()}
+        </Text>
+
         {/* Título */}
         <Text style={styles.title}>COTIZACION</Text>
 
         {/* Descripción de la Cotización */}
         <Text style={styles.description}>
-          {data.description} {data.client.toUpperCase()}
+          {data.description.toUpperCase()} 
         </Text>
 
         {/* Lista de Servicios / Productos */}
